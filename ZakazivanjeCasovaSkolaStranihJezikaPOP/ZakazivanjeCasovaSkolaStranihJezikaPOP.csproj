@@ -77,11 +77,20 @@
     <Compile Include="windows\CasWindows\DodajIzmeniCas.xaml.cs">
       <DependentUpon>DodajIzmeniCas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="windows\ProfesorWindows\DodajIzmeniProfesora.xaml.cs">
+      <DependentUpon>DodajIzmeniProfesora.xaml</DependentUpon>
+    </Compile>
     <Compile Include="windows\ProfesorWindows\ProfesorDisplay.xaml.cs">
       <DependentUpon>ProfesorDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="windows\SkolaWindows\DodajIzmeniSkolu.xaml.cs">
+      <DependentUpon>DodajIzmeniSkolu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="windows\SkolaWindows\SkolaDisplay.xaml.cs">
       <DependentUpon>SkolaDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\StudentWindows\DodajIzmeniStudenta.xaml.cs">
+      <DependentUpon>DodajIzmeniStudenta.xaml</DependentUpon>
     </Compile>
     <Compile Include="windows\StudentWindows\StudentDisplay.xaml.cs">
       <DependentUpon>StudentDisplay.xaml</DependentUpon>
@@ -114,11 +123,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="windows\ProfesorWindows\DodajIzmeniProfesora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="windows\ProfesorWindows\ProfesorDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="windows\SkolaWindows\DodajIzmeniSkolu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="windows\SkolaWindows\SkolaDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\StudentWindows\DodajIzmeniStudenta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

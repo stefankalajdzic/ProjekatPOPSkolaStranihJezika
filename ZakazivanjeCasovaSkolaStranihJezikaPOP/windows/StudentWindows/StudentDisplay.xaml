@@ -9,16 +9,16 @@
     <Grid Margin="-1,0,15,13">
         <Menu Name="Menu" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="792">
             <MenuItem Name="MIStudents" Header="Studenti">
-                <MenuItem Name="MIAddStudent" Header="Dodaj Studenta"/>
-                <MenuItem Name="MIEditStudent" Header="Izmeni Studenta"/>
-                <MenuItem Name="MIRemoveStudent" Header="Obrisi Studenta" Click="MIRemoveStudent_Click"/>
+                <MenuItem Name="MIDodajStudent" Header="Dodaj Studenta" Click="MIDodajStudent_Click"/>
+                <MenuItem Name="MIIzmeniStudent" Header="Izmeni Studenta" Click="MIIzmeniStudent_Click"/>
+                <MenuItem Name="MIObrisiStudent" Header="Obrisi Studenta" Click="MIObrisiStudent_Click"/>
 
             </MenuItem>
         </Menu>
-        <DataGrid CanUserAddRows="False" Name="DGStudents" HorizontalAlignment="Left" 
-                  Height="371" Margin="10,40,0,0" VerticalAlignment="Top" Width="612"
+        <DataGrid CanUserAddRows="False" Name="DGStudenti" HorizontalAlignment="Left" 
+                  Height="371" Margin="10,40,0,0" VerticalAlignment="Top" Width="872"
                   AutoGenerateColumns="True"
-                  AutoGeneratingColumn="DGStudents_AutoGeneratingColumn"
+                  AutoGeneratingColumn="DGStudenti_AutoGeneratingColumn"
                   IsReadOnly="True"
                   />
         <ContentControl Content="ContentControl" HorizontalAlignment="Left" Margin="859,-44,-131,0" VerticalAlignment="Top" Width="100"/>

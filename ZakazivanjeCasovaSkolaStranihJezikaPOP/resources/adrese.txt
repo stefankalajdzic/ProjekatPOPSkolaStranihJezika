@@ -1,4 +1,5 @@
-1;Stevana Sremca;3;Novi Sad;Serbia;True
-2;Doza Djerdja;12;Novi Sad;Serbia;True
-3;Jovana Subotica;4;Novi Sad;Serbia;True
-4;Gogoljeva;32;Novi Sad;Serbia;True
+1;Stevana Sremca;3;Novi Sad;Srbija;True
+2;Doza Djerdja;12;Novi Sad;Srbija;True
+3;Jovana Subotica;4;Novi Sad;Srbija;True
+4;Gogoljeva;32;Novi Sad;Srbija;True
+5;Jovana Subotica;10;Novi Sad;Srbija;False

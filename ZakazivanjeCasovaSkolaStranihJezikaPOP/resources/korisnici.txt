@@ -1,2 +1,2 @@
-1;Nikola;Matošić;0510000800048;MUSKI;1;matisicliman@gmail.com;Nikolica.12;STUDENT;True
-2;Stefan;Kalajdžić;1234567898765;MUSKI;2;kalajbrcko@gmail.com;Kalajica.12;STUDENT;True
+1;Tanja;Kojić;0510000800048;MUSKI;1;tanjakojic@gmail.com;Tanjica.12;STUDENT;True
+2;Mladen;Kalajdžić;1234567898765;MUSKI;2;kalajbrcko@gmail.com;Kalajica.12;STUDENT;True

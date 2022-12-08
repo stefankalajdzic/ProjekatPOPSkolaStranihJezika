@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,17 +18,16 @@ using ZakazivanjeCasovaSkolaStranihJezikaPOP.models;
 
 namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.StudentWindows
 {
-    /// <summary>
-    /// Interaction logic for StudentDisplay.xaml
-    /// </summary>
     public partial class StudentDisplay : Window
     {
         ICollectionView view;
+        Student _selected;
         public StudentDisplay()
         {
             InitializeComponent();
             UpdateView();
         }
+
         private void UpdateView()
         {
             ObservableCollection<Student> activeEntities = new ObservableCollection<Student>();
@@ -38,26 +38,57 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.StudentWindows
                     activeEntities.Add(student);
                 }
             }
+            var itemSource = activeEntities.Select(x => new
+            {
+                id = x.ID,
+                ime = x.Korisnik.Ime,
+                prezime = x.Korisnik.Prezime,
+                jmbg = x.Korisnik.JMBG,
+                pol = x.Korisnik.Pol,
+                adresa = x.Korisnik.Adresa.Ulica,
+                email = x.Korisnik.Email
+            }).ToList();
+            DGStudenti.ItemsSource = itemSource;
             view = CollectionViewSource.GetDefaultView(activeEntities);
-            DGStudents.ItemsSource = view;
-            DGStudents.IsSynchronizedWithCurrentItem = true;
-            DGStudents.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Star);
+            DGStudenti.IsSynchronizedWithCurrentItem = true;
+            DGStudenti.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Star);
         }
 
-        private void DGStudents_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        private void DGStudenti_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
-            if (e.PropertyName.Equals("Aktivan"))
-                e.Column.Visibility = Visibility.Collapsed;
+
+        }
+        private void MIDodajStudent_Click(object sender, RoutedEventArgs e)
+        {
+            DodajIzmeniStudenta addWindow = new DodajIzmeniStudenta(null);
+            addWindow.Show();
         }
 
-        private void MIRemoveStudent_Click(object sender, RoutedEventArgs e)
+
+        private void MIIzmeniStudent_Click(object sender, RoutedEventArgs e)
         {
-            Student selected = view.CurrentItem as Student;
-            Util.Instance.ObrisiEntitet(selected);
+            object item = DGStudenti.SelectedItem;
+            PropertyInfo[] props = DGStudenti.SelectedItem.GetType().GetProperties();
+            string studentID = props[0].GetValue(item, null).ToString();
+            _selected = Util.Instance.Studenti.FirstOrDefault(c => int.Parse(c.ID) == int.Parse(studentID));
+
+            DodajIzmeniStudenta editWindow = new DodajIzmeniStudenta(_selected);
+            editWindow.Show();
+
+        }
+        private void MIObrisiStudent_Click(object sender, RoutedEventArgs e)
+        {
+            object item = DGStudenti.SelectedItem;
+            PropertyInfo[] props = DGStudenti.SelectedItem.GetType().GetProperties();
+            string studentID = props[0].GetValue(item, null).ToString();
+            _selected = Util.Instance.Studenti.FirstOrDefault(c => int.Parse(c.ID) == int.Parse(studentID));
+
+            Util.Instance.ObrisiEntitet(_selected);
 
             UpdateView();
             view.Refresh();
 
         }
+
     }
 }

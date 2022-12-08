@@ -8,20 +8,19 @@
         Title="SkolaDisplay" Height="450" Width="800">
     <Grid>
         <Menu Name="Menu" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="792">
-            <MenuItem Name="MIAdrese" Header="Skole">
-                <MenuItem Name="MIDodajAdresu" Header="Dodaj Skolu" Click="MIDodajAdresu_Click"/>
-                <MenuItem Name="MIIzmeniAdresu" Header="Izmeni Skolu" Click="MIIzmeniAdresu_Click" />
-                <MenuItem Name="MIObrisiAdresu" Header="Obrisi Skolu" Click="MIObrisiAdresu_Click" />
+            <MenuItem Name="MISchools" Header="Skole">
+                <MenuItem Name="MIDodajSkolu" Header="Dodaj Skolu" Click="MIDodajSkolu_Click"/>
+                <MenuItem Name="MIIzmeniSkolu" Header="Izmeni Skolu" Click="MIIzmeniSkolu_Click" />
+                <MenuItem Name="MIObrisiSkolu" Header="Obrisi Skolu" Click="MIObrisiSkolu_Click" />
 
             </MenuItem>
         </Menu>
-        <DataGrid CanUserAddRows="False" Name="DGSchools" HorizontalAlignment="Left" 
+        <DataGrid CanUserAddRows="False" Name="DGSkola" HorizontalAlignment="Left" 
                   Height="371" Margin="10,40,0,0" VerticalAlignment="Top" Width="612"
                   AutoGenerateColumns="True"
-                  AutoGeneratingColumn="DGSchools_AutoGeneratingColumn"
+                  AutoGeneratingColumn="DGSkola_AutoGeneratingColumn"
                   IsReadOnly="True"
                   />
-        <TextBox Name="TxtPretraga" HorizontalAlignment="Left" Height="23" Margin="656,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyUp="TxtPretraga_KeyUp"/>
         <ContentControl Content="ContentControl" HorizontalAlignment="Left" Margin="859,-44,-131,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>

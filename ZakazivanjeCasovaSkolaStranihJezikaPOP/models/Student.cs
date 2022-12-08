@@ -26,7 +26,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
 
         private List<Cas> _casovi;
 
-        public List<Cas> Casovi
+        public List<Cas> Casovi 
         {
             get { return _casovi; }
             set { _casovi = value; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,37 +18,14 @@ using ZakazivanjeCasovaSkolaStranihJezikaPOP.models;
 
 namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.SkolaWindows
 {
-    /// <summary>
-    /// Interaction logic for SkolaDisplay.xaml
-    /// </summary>
     public partial class SkolaDisplay : Window
     {
         ICollectionView view;
+        Skola _selected;
         public SkolaDisplay()
         {
             InitializeComponent();
             UpdateView();
-        }
-
-        private bool CustomFilter(object obj)
-        {
-            /* Adresa adresa = obj as Adresa;
-             if (adresa.Aktivan)
-             {
-                 if (TxtPretraga.Text != "")
-                 {
-                     return adresa.Ulica.Contains(TxtPretraga.Text);
-                 }
-                 else
-                     return true;
-             }*/
-
-            return false;
-        }
-
-        private void TxtPretraga_KeyUp(object sender, KeyEventArgs e)
-        {
-            view.Refresh();
         }
 
         private void UpdateView()
@@ -60,56 +38,59 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.SkolaWindows
                     activeEntities.Add(skola);
                 }
             }
-            view = CollectionViewSource.GetDefaultView(activeEntities);
-            DGSchools.ItemsSource = view;
-            DGSchools.IsSynchronizedWithCurrentItem = true;
-            DGSchools.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Star);
-        }
 
-        private void DGSchools_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
-        {
-            if (e.PropertyName.Equals("Aktivan"))
-                e.Column.Visibility = Visibility.Collapsed;
-        }
-
-
-        private void MIDodajAdresu_Click(object sender, RoutedEventArgs e)
-        {
-            /*Adresa novaAdresa = new Adresa();
-            DodajAzurirajAdresu dodajProzor = new DodajAzurirajAdresu(novaAdresa);
-            this.Hide();
-            if ((bool)dodajProzor.ShowDialog())
+            var itemSource = activeEntities.Select(x => new
             {
-                //view.Refresh();
-            }
-            this.Show();*/
+                id = x.ID,
+                naziv = x.Naziv,
+                adresa = x.Adresa.Ulica,
+                jezici = string.Join(",", x.Jezici.ToArray())
+            }).ToList();
+            DGSkola.ItemsSource = itemSource;
+
+            view = CollectionViewSource.GetDefaultView(activeEntities);
+            DGSkola.IsSynchronizedWithCurrentItem = true;
+            DGSkola.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Star);
+        }
+
+        private void DGSkola_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+
         }
 
 
-        private void MIIzmeniAdresu_Click(object sender, RoutedEventArgs e)
+        private void MIDodajSkolu_Click(object sender, RoutedEventArgs e)
         {
-            /*  Adresa selektovanaAdresa = view.CurrentItem as Adresa;
-              if (selektovanaAdresa != null)
-              {
-                  Adresa old = (Adresa)selektovanaAdresa.Clone();
-                  DodajAzurirajAdresu azuriranjeProzor = new DodajAzurirajAdresu(selektovanaAdresa, EStatus.Izmeni);
-                  if (azuriranjeProzor.ShowDialog() != true)
-                  {
-                      int index = Util.Instanca.Adrese.IndexOf(selektovanaAdresa);
-                      Util.Instanca.Adrese[index] = old;
-                  }
-              }*/
+            DodajIzmeniSkolu addWindow = new DodajIzmeniSkolu(null);
+            addWindow.Show();
         }
 
 
-        private void MIObrisiAdresu_Click(object sender, RoutedEventArgs e)
+        private void MIIzmeniSkolu_Click(object sender, RoutedEventArgs e)
         {
-            Skola selectedSchool = view.CurrentItem as Skola;
-            Util.Instance.ObrisiEntitet(selectedSchool);
+            object item = DGSkola.SelectedItem;
+            PropertyInfo[] props = DGSkola.SelectedItem.GetType().GetProperties();
+            string schoolID = props[0].GetValue(item, null).ToString();
+            _selected = Util.Instance.Skole.FirstOrDefault(c => int.Parse(c.ID) == int.Parse(schoolID));
+
+            DodajIzmeniSkolu editWindow = new DodajIzmeniSkolu(_selected);
+            editWindow.Show();
+
+        }
+
+
+        private void MIObrisiSkolu_Click(object sender, RoutedEventArgs e)
+        {
+            object item = DGSkola.SelectedItem;
+            PropertyInfo[] props = DGSkola.SelectedItem.GetType().GetProperties();
+            string schoolID = props[0].GetValue(item, null).ToString();
+            _selected = Util.Instance.Skole.FirstOrDefault(c => int.Parse(c.ID) == int.Parse(schoolID));
+            Util.Instance.ObrisiEntitet(_selected);
 
             UpdateView();
             view.Refresh();
 
         }
+
     }
 }
