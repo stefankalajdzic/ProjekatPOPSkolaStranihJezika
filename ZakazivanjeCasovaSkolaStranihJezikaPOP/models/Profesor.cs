@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
 {
-    class Profesor
+    public class Profesor
     {
 
         private string _id;

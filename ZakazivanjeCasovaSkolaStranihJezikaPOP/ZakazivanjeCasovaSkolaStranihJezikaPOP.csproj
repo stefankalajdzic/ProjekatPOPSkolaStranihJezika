@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A2C39767-A611-4E8E-852E-5C04F4D4721F}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>ZakazivanjeCasovaSkolaStranihJezikaPOP</RootNamespace>
     <AssemblyName>ZakazivanjeCasovaSkolaStranihJezikaPOP</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -33,6 +33,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -65,8 +68,14 @@
     <Compile Include="windows\AdresaWindows\AdresaDisplay.xaml.cs">
       <DependentUpon>AdresaDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="windows\AdresaWindows\DodajIzmeniAdresu.xaml.cs">
+      <DependentUpon>DodajIzmeniAdresu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="windows\CasWindows\CasDisplay.xaml.cs">
       <DependentUpon>CasDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\CasWindows\DodajIzmeniCas.xaml.cs">
+      <DependentUpon>DodajIzmeniCas.xaml</DependentUpon>
     </Compile>
     <Compile Include="windows\ProfesorWindows\ProfesorDisplay.xaml.cs">
       <DependentUpon>ProfesorDisplay.xaml</DependentUpon>
@@ -93,7 +102,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="windows\AdresaWindows\DodajIzmeniAdresu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="windows\CasWindows\CasDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\CasWindows\DodajIzmeniCas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

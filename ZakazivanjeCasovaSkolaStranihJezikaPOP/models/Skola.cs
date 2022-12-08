@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
 {
-    class Skola
+    public class Skola
     {
 
         private string _id;
@@ -55,7 +55,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
             {
                 jezici += jezik + ",";
             }
-            return ID.ToString() + ";" + Naziv + ";" + Adresa.ID + ";" + jezici.Substring(0, jezici.Length - 1) + ";" + Aktivan.ToString();
+            return ID + ";" + Naziv + ";" + Adresa.ID + ";" + jezici.Substring(0, jezici.Length - 1) + ";" + Aktivan.ToString();
         }
 
     }

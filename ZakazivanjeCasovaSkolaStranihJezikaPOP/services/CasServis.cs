@@ -48,6 +48,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.services
                     Student = student,
                     Aktivan = bool.Parse(lajs[7])
                 });
+                Console.WriteLine(line);
 
             }
             file.Close();

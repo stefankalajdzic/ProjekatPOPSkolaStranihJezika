@@ -7,7 +7,7 @@ using ZakazivanjeCasovaSkolaStranihJezikaPOP.enums;
 
 namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
 {
-    class RegistrovaniKorisnik
+    public class RegistrovaniKorisnik
     {
 
         private string _id;

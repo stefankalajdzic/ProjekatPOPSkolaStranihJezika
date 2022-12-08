@@ -21,7 +21,6 @@
                   AutoGeneratingColumn="DGAdrese_AutoGeneratingColumn"
                   IsReadOnly="True"
                   />
-        <TextBox Name="TxtPretraga" HorizontalAlignment="Left" Height="23" Margin="656,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyUp="TxtPretraga_KeyUp"/>
         <ContentControl Content="ContentControl" HorizontalAlignment="Left" Margin="859,-44,-131,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
