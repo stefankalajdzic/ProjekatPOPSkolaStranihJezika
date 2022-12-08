@@ -105,7 +105,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.AdresaWindows
         private void MIObrisiAdresu_Click(object sender, RoutedEventArgs e)
         {
             Adresa selectedAddress = view.CurrentItem as Adresa;
-            Util.Instance.obrisiEntitet(selectedAddress);
+            Util.Instance.ObrisiEntitet(selectedAddress);
 
             UpdateView();
             view.Refresh();

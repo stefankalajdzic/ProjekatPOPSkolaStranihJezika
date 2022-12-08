@@ -72,5 +72,11 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
             get { return _aktivan; }
             set { _aktivan = value; }
         }
+
+        public string formatirajTxtFajlLiniju()
+        {
+            return ID + ";" + Profesor.ID + ";" + Datum + ";" + VremePocetka + ";" + Trajanje + ";" + Status + ";" + Student.ID + ";" + Aktivan.ToString();
+        }
+
     }
 }

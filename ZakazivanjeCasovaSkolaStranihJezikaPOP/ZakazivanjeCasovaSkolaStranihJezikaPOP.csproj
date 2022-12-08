@@ -57,12 +57,25 @@
     </ApplicationDefinition>
     <Compile Include="models\Util.cs" />
     <Compile Include="services\AdresaServis.cs" />
+    <Compile Include="services\CasServis.cs" />
+    <Compile Include="services\KorisnikServis.cs" />
+    <Compile Include="services\ProfesorServis.cs" />
     <Compile Include="services\SkolaServis.cs" />
+    <Compile Include="services\StudentServis.cs" />
     <Compile Include="windows\AdresaWindows\AdresaDisplay.xaml.cs">
       <DependentUpon>AdresaDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="windows\CasWindows\CasDisplay.xaml.cs">
+      <DependentUpon>CasDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ProfesorWindows\ProfesorDisplay.xaml.cs">
+      <DependentUpon>ProfesorDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="windows\SkolaWindows\SkolaDisplay.xaml.cs">
       <DependentUpon>SkolaDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\StudentWindows\StudentDisplay.xaml.cs">
+      <DependentUpon>StudentDisplay.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -80,7 +93,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="windows\CasWindows\CasDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ProfesorWindows\ProfesorDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="windows\SkolaWindows\SkolaDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\StudentWindows\StudentDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,6 +150,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\skole.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\casovi.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\profesori.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\studenti.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\korisnici.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

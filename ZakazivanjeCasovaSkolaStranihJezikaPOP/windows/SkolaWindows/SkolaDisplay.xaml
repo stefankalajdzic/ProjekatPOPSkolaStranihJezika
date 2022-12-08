@@ -8,10 +8,10 @@
         Title="SkolaDisplay" Height="450" Width="800">
     <Grid>
         <Menu Name="Menu" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="792">
-            <MenuItem Name="MIAdrese" Header="Schools">
-                <MenuItem Name="MIDodajAdresu" Header="Add School" Click="MIDodajAdresu_Click"/>
-                <MenuItem Name="MIIzmeniAdresu" Header="Edit School" Click="MIIzmeniAdresu_Click" />
-                <MenuItem Name="MIObrisiAdresu" Header="Delete School" Click="MIObrisiAdresu_Click" />
+            <MenuItem Name="MIAdrese" Header="Skole">
+                <MenuItem Name="MIDodajAdresu" Header="Dodaj Skolu" Click="MIDodajAdresu_Click"/>
+                <MenuItem Name="MIIzmeniAdresu" Header="Izmeni Skolu" Click="MIIzmeniAdresu_Click" />
+                <MenuItem Name="MIObrisiAdresu" Header="Obrisi Skolu" Click="MIObrisiAdresu_Click" />
 
             </MenuItem>
         </Menu>

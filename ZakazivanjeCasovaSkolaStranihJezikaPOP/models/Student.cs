@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
     {
         private string _id;
 
-        public string Id
+        public string ID
         {
             get { return _id; }
             set { _id = value; }
@@ -40,5 +40,9 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
             set { _aktivan = value; }
         }
 
+        public string formatirajTxtFajlLiniju()
+        {
+            return ID + ";" + Korisnik.ID + ";" + Aktivan.ToString();
+        }
     }
 }

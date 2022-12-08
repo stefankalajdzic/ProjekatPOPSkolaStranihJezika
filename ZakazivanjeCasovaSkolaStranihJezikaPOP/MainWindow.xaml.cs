@@ -14,7 +14,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ZakazivanjeCasovaSkolaStranihJezikaPOP.models;
 using ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.AdresaWindows;
+using ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.CasWindows;
+using ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.ProfesorWindows;
 using ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.SkolaWindows;
+using ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.StudentWindows;
 
 namespace ZakazivanjeCasovaSkolaStranihJezikaPOP
 {
@@ -39,6 +42,22 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP
         {
             SkolaDisplay schoolsDisplayWindow = new SkolaDisplay();
             schoolsDisplayWindow.Show();
+        }
+
+        private void StudentsButton_Click(Object sender, RoutedEventArgs e)
+        {
+            StudentDisplay studentsDisplayWindow = new StudentDisplay();
+            studentsDisplayWindow.Show();
+        }
+        private void ProfessorsButton_Click(Object sender, RoutedEventArgs e)
+        {
+            ProfesorDisplay professorsDisplayWindow = new ProfesorDisplay();
+            professorsDisplayWindow.Show();
+        }
+        private void LessonsButton_Click(Object sender, RoutedEventArgs e)
+        {
+            CasDisplay lessonDisplayWindow = new CasDisplay();
+            lessonDisplayWindow.Show();
         }
     }
 }

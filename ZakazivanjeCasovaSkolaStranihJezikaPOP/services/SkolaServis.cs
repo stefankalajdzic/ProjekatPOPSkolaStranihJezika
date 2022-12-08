@@ -11,7 +11,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.services
 {
     class SkolaServis
     {
-        public void sacuvajSkole()
+        public void SacuvajSkole()
         {
             using (StreamWriter file = new StreamWriter(@"../../resources/skole.txt"))
             {
@@ -22,7 +22,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.services
             }
         }
 
-        public void citajSkole()
+        public void CitajSkole()
         {
             Util.Instance.Skole = new ObservableCollection<Skola>();
             StreamReader streamReader = new StreamReader(@"../../resources/skole.txt");

@@ -10,6 +10,14 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
     class RegistrovaniKorisnik
     {
 
+        private string _id;
+
+        public string ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
         private string _ime;
 
         public string Ime
@@ -82,18 +90,11 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
             set { _aktivan = value; }
         }
 
-        public RegistrovaniKorisnik() { }
-
-        public override string ToString()
+        public string formatirajTxtFajlLiniju()
         {
-            return "Ja sam " + Ime + ". Prezivam se " + Prezime + "." + " Moj pol je: " + Pol + ". Ja sam tip korisnika: " + TipKorisnika + " moj email je:" + Email; // + " Moja adresa: " + Adresa.ToString(); 
+            return ID + ";" + Ime + ";" + Prezime + ";" + JMBG + ";" + Pol.ToString() + ";" + Adresa.ID + ";" + Email + ";"
+                + Lozinka + ";" + TipKorisnika.ToString() + ";" + Aktivan.ToString();
         }
-
-        public string KorisnikZaUpisUFajl()
-        {
-            return Ime + "; " + Prezime + ";" + Email + ";" + Lozinka + ";" + JMBG + ";" + Pol + ";" + TipKorisnika + ";" + Aktivan;
-        }
-
 
     }
 }

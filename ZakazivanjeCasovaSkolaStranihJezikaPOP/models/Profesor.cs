@@ -11,7 +11,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
 
         private string _id;
 
-        public string Id
+        public string ID
         {
             get { return _id; }
             set { _id = value; }
@@ -55,6 +55,16 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
         {
             get { return _aktivan; }
             set { _aktivan = value; }
+        }
+
+        public string formatirajTxtFajlLiniju()
+        {
+            string jezici = "";
+            foreach (string jezik in Jezici)
+            {
+                jezici += jezik + ",";
+            }
+            return ID + ";" + Korisnik.ID + ";" + Skola.ID + ";" + jezici.Substring(0, jezici.Length - 1) + ";" + Aktivan.ToString();
         }
 
     }

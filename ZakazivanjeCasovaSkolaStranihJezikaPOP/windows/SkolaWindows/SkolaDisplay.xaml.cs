@@ -105,7 +105,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.SkolaWindows
         private void MIObrisiAdresu_Click(object sender, RoutedEventArgs e)
         {
             Skola selectedSchool = view.CurrentItem as Skola;
-            Util.Instance.obrisiEntitet(selectedSchool);
+            Util.Instance.ObrisiEntitet(selectedSchool);
 
             UpdateView();
             view.Refresh();

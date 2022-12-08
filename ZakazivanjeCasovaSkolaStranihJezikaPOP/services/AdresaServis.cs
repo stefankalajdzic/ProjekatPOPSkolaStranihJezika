@@ -11,9 +11,9 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.services
 {
     class AdresaServis
     {
-        public void sacuvajAdresu()
+        public void SacuvajAdrese()
         {
-            using (StreamWriter file = new StreamWriter(@"../../../resources/adrese.txt"))
+            using (StreamWriter file = new StreamWriter(@"../../resources/adrese.txt"))
             {
                 foreach (Adresa adresa in Util.Instance.Adrese)
                 {
@@ -22,7 +22,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.services
             }
         }
 
-        public void citajAdrese()
+        public void CitajAdrese()
         {
             Util.Instance.Adrese = new ObservableCollection<Adresa>();
             StreamReader streamReader = new StreamReader(@"../../resources/adrese.txt");
