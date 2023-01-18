@@ -75,7 +75,14 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
 
         public string formatirajTxtFajlLiniju()
         {
-            return ID + ";" + Profesor.ID + ";" + Datum + ";" + VremePocetka + ";" + Trajanje + ";" + Status + ";" + Student.ID + ";" + Aktivan.ToString();
+            if (Student != null)
+            {
+                return ID + ";" + Profesor.ID + ";" + Datum + ";" + VremePocetka + ";" + Trajanje + ";" + Status + ";" + Student.ID + ";" + Aktivan.ToString();
+            }
+            else
+            {
+                return ID + ";" + Profesor.ID + ";" + Datum + ";" + VremePocetka + ";" + Trajanje + ";" + Status + ";" + 0 + ";" + Aktivan.ToString();
+            }
         }
 
     }

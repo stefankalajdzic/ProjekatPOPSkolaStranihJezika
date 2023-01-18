@@ -35,20 +35,32 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.services
                 //1;1;03-10-2022;18:43;1:45;FREE;1;True
                 string[] lajs = line.Split(';');
                 Profesor profesor = Util.Instance.Profesori.FirstOrDefault(c => c.ID == lajs[1]);
-                Student student = Util.Instance.Studenti.FirstOrDefault(c => c.ID == lajs[6]);
-
-                Util.Instance.Casovi.Add(new Cas
+                Student student;
+                if (int.Parse(lajs[6]) != 0)
                 {
-                    ID =  lajs[0],
-                    Profesor = profesor,
-                    Datum = lajs[2],
-                    VremePocetka = lajs[3],
-                    Trajanje = lajs[4],
-                    Status = (EStatusLekcije)Enum.Parse(typeof(EStatusLekcije), lajs[5]),
-                    Student = student,
-                    Aktivan = bool.Parse(lajs[7])
-                });
-                Console.WriteLine(line);
+                    student = Util.Instance.Studenti.FirstOrDefault(c => c.ID == lajs[6]);
+                }
+                else
+                {
+                    student = null;
+                }
+               
+
+                    Cas cas =  new Cas()
+                    {
+                        ID =  lajs[0],
+                        Profesor = profesor,
+                        Datum = lajs[2],
+                        VremePocetka = lajs[3],
+                        Trajanje = lajs[4],
+                        Status = (EStatusLekcije)Enum.Parse(typeof(EStatusLekcije), lajs[5]),
+                        Student = student,
+                        Aktivan = bool.Parse(lajs[7])
+                    };
+
+                     Util.Instance.Casovi.Add(cas);
+
+                     profesor.Casovi.Add(cas);
 
             }
             file.Close();

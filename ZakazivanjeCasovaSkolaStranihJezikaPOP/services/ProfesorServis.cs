@@ -39,7 +39,6 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.services
 
                 Util.Instance.Profesori.Add(new Profesor
                 {
-                    //1;1;1;Serbian,Russian;True
                     ID = lajs[0],
                     Korisnik = korisnik,
                     Skola = skola,
@@ -47,8 +46,6 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.services
                     Casovi = new List<Cas>(),
                     Aktivan = bool.Parse(lajs[4])
                 });
-
-                Console.WriteLine(line);
 
             }
             file.Close();

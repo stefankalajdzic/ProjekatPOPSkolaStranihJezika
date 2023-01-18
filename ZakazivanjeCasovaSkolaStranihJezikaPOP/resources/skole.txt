@@ -1,1 +1,3 @@
 1;Centar za strane jezike Kalaj;2;Serbian,Russian,English;True
+2;Skola stranih jezika Sike;2;Serbian,Italian, German;True
+

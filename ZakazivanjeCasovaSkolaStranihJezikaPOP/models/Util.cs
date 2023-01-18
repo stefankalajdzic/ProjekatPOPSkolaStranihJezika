@@ -50,6 +50,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
         public ObservableCollection<Student> Studenti { get; set; }
         public ObservableCollection<Profesor> Profesori { get; set; }
         public ObservableCollection<Cas> Casovi { get; set; }
+        public RegistrovaniKorisnik UlogovanKorisnik { get; set; }
 
 
         public void Initialize()
@@ -106,6 +107,29 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
                 pronadjen.Aktivan = false;
             }
             sacuvajEnitete();
+        }
+
+        public RegistrovaniKorisnik Login(string jmbg, string lozinka)
+        {
+            foreach (RegistrovaniKorisnik korisnik in Korisnici)
+            {
+                if (korisnik.JMBG.Equals(jmbg) && korisnik.Lozinka.Equals(lozinka))
+                {
+                    return korisnik;
+                }
+            }
+
+            return null;
+        }
+
+        public Student pronadjiStudentaPoKorisnickomId(int korisnikID)
+        {
+            return Studenti.FirstOrDefault(c => int.Parse(c.Korisnik.ID) == korisnikID);
+        }
+
+        public Profesor pronadjiProfesoraPoKorisnickomId(int korisnikID)
+        {
+            return Profesori.FirstOrDefault(p => int.Parse(p.Korisnik.ID) == korisnikID);
         }
     }
 }
