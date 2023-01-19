@@ -34,7 +34,7 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.UtilWindows
         private void BtnOk_Click(object sender, RoutedEventArgs e)
         {
 
-            Util.Instance.UlogovanKorisnik = Util.Instance.Login(TxtJMBG.Text, TxtPassword.Password.ToString());
+            Util.Instance.UlogovanKorisnik = Util.Instance.Login(TxtName.Text, TxtPassword.Password.ToString());
 
             if (Util.Instance.UlogovanKorisnik != null)
             {

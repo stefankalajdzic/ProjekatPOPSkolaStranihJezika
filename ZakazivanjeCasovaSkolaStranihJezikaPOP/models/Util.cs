@@ -109,11 +109,11 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
             sacuvajEnitete();
         }
 
-        public RegistrovaniKorisnik Login(string jmbg, string lozinka)
+        public RegistrovaniKorisnik Login(string ime, string lozinka)
         {
             foreach (RegistrovaniKorisnik korisnik in Korisnici)
             {
-                if (korisnik.JMBG.Equals(jmbg) && korisnik.Lozinka.Equals(lozinka))
+                if (korisnik.Ime.Equals(ime) && korisnik.Lozinka.Equals(lozinka))
                 {
                     return korisnik;
                 }

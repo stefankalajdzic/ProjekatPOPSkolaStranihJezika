@@ -8,8 +8,8 @@
         Title="Login" Height="450" Width="800">
     <Grid>
         <Label Content="Login" HorizontalAlignment="Center" Height="50" Margin="324,48,325.6,0" VerticalAlignment="Top" Width="144" FontSize="24" Background="Gray" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="-0.165,0.027"/>
-        <Label Content="jmbg" HorizontalAlignment="Left" Height="32" Margin="169,158,0,0" VerticalAlignment="Top" Width="128"/>
-        <TextBox HorizontalAlignment="Left" Height="47" Margin="302,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" TextAlignment="Center" Name="TxtJMBG"/>
+        <Label Content="ime" HorizontalAlignment="Left" Height="32" Margin="169,158,0,0" VerticalAlignment="Top" Width="128"/>
+        <TextBox HorizontalAlignment="Left" Height="47" Margin="302,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" TextAlignment="Center" Name="TxtName"/>
         <Label Content="lozinka" HorizontalAlignment="Left" Height="32" Margin="169,243,0,0" VerticalAlignment="Top" Width="128"/>
         <PasswordBox HorizontalAlignment="Left" Height="47" Margin="302,228,0,0" VerticalAlignment="Top" Width="194" Name="TxtPassword" HorizontalContentAlignment="Center"/>
 
