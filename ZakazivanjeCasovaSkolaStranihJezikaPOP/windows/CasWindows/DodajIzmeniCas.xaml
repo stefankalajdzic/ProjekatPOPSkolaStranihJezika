@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.CasWindows"
         mc:Ignorable="d"
-        Title="DodajIzmeniCas" Height="450" Width="800">
+        Title="Dodaj i izmeni cas - prozor" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions >
             <ColumnDefinition  />
@@ -22,16 +22,16 @@
         </Grid.RowDefinitions>
 
 
-        <Label Grid.Column="0" Grid.Row="0" Name="LblProfessor" Content="Professor:" />
+        <Label Grid.Column="0" Grid.Row="0" Name="LblProfessor" Content="Profesor:" />
         <ComboBox Name="CmbProfessor"  Grid.Column="1" Grid.Row="0" />
 
-        <Label Grid.Column="0" Grid.Row="1" Name="LblDate" Content="Date:"/>
+        <Label Grid.Column="0" Grid.Row="1" Name="LblDate" Content="Datum:"/>
         <TextBox Grid.Column="1" Grid.Row="1" Name="TxtDate"/>
 
-        <Label Grid.Column="0" Grid.Row="2" Name="LblStartTime" Content="StartTime:"/>
+        <Label Grid.Column="0" Grid.Row="2" Name="LblStartTime" Content="Vreme pocetka:"/>
         <TextBox Grid.Column="1" Grid.Row="2" Name="TxtStartTime"/>
 
-        <Label Grid.Column="0" Grid.Row="3" Name="LblDuration" Content="Duration:"/>
+        <Label Grid.Column="0" Grid.Row="3" Name="LblDuration" Content="Trajanje:"/>
         <TextBox Grid.Column="1" Grid.Row="3" Name="TxtDuration"/>
 
         <Label Grid.Column="0" Grid.Row="4" Name="LblStatus" Content="Status:"/>

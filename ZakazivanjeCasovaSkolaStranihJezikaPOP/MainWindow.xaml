@@ -5,21 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZakazivanjeCasovaSkolaStranihJezikaPOP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Glavni prozor" Height="450" Width="800">
     <Grid>
-        <Button Content="Adrese" HorizontalAlignment="Left" Height="70" Margin="24,36,0,0" VerticalAlignment="Top" Width="201" Click="AddressesButton_Click"/>
         <Button Content="Skole" HorizontalAlignment="Left" Height="70" Margin="299,120,0,0" VerticalAlignment="Top" Width="192" Click="SchoolsButton_Click"/>
-        <Button Content="Studenti" HorizontalAlignment="Left" Height="70" Margin="26,120,0,0" VerticalAlignment="Top" Width="201" Click="StudentsButton_Click" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.003"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
         <Button Content="Profesori" HorizontalAlignment="Left" Height="70" Margin="299,36,0,0" VerticalAlignment="Top" Width="192" Click="ProfessorsButton_Click"/>
-        <Button Content="Lekcije" HorizontalAlignment="Left" Height="72" Margin="556,79,0,0" VerticalAlignment="Top" Width="178" Click="LessonsButton_Click"/>
+        <Button Content="Registracija" HorizontalAlignment="Left" Height="70" Margin="37,36,0,0" VerticalAlignment="Top" Width="192" Click="RegistrationButton_Click"/>
+        <Button Content="Login" HorizontalAlignment="Left" Height="70" Margin="37,120,0,0" VerticalAlignment="Top" Width="192" Click="LoginButton_Click"/>
     </Grid>
 </Window>

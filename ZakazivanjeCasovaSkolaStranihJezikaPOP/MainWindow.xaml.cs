@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.UIs.NotRegisteredUserWindows;
+using ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.UtilWindows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,38 +28,34 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP
     /// </summary>
     public partial class MainWindow : Window
     {
+      
         public MainWindow()
         {
             InitializeComponent();
             Util.Instance.Initialize();
         }
 
-        private void AddressesButton_Click(object sender, RoutedEventArgs e)
-        {
-            AdresaDisplay addressesDisplayWindow = new AdresaDisplay();
-            addressesDisplayWindow.Show();
-        }
-
         private void SchoolsButton_Click(Object sender, RoutedEventArgs e)
         {
-            SkolaDisplay schoolsDisplayWindow = new SkolaDisplay();
-            schoolsDisplayWindow.Show();
-        }
-
-        private void StudentsButton_Click(Object sender, RoutedEventArgs e)
-        {
-            StudentDisplay studentsDisplayWindow = new StudentDisplay();
-            studentsDisplayWindow.Show();
+            NRUSchoolsWindow nruSchoolsDisplayWindow = new NRUSchoolsWindow();
+            nruSchoolsDisplayWindow.Show();
         }
         private void ProfessorsButton_Click(Object sender, RoutedEventArgs e)
         {
-            ProfesorDisplay professorsDisplayWindow = new ProfesorDisplay();
-            professorsDisplayWindow.Show();
+            NRUProfessorsWindow nruProfessorsDisplayWindow = new NRUProfessorsWindow();
+            nruProfessorsDisplayWindow.Show();
         }
-        private void LessonsButton_Click(Object sender, RoutedEventArgs e)
+        private void RegistrationButton_Click(Object sender, RoutedEventArgs e)
         {
-            CasDisplay lessonDisplayWindow = new CasDisplay();
-            lessonDisplayWindow.Show();
+            DodajIzmeniStudenta studentsDisplayWindow = new DodajIzmeniStudenta(null);
+            studentsDisplayWindow.Show();
         }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            Login loginWindow = new Login();
+            loginWindow.Show();
+        }
+
     }
 }

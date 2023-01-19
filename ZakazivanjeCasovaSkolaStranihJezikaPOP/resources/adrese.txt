@@ -1,5 +1,6 @@
 1;Stevana Sremca;3;Novi Sad;Srbija;True
 2;Doza Djerdja;12;Novi Sad;Srbija;True
-3;Jovana Subotica;4;Novi Sad;Srbija;True
+3;Jovana Subotica;4;Subotica;Srbija;True
 4;Gogoljeva;32;Novi Sad;Srbija;True
-5;Jovana Subotica;10;Novi Sad;Srbija;False
+5;Bulevar Vojvode Stepe;10;Beograd;Srbija;True
+6;Milosa Velikog;16;Beograd;Srbija;True

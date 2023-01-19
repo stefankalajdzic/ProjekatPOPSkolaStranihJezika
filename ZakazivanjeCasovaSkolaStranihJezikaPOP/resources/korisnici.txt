@@ -1,3 +1,6 @@
-1;Tanja;Kojić;0510000800048;MUSKI;1;tanjakojic@gmail.com;Tanjica.12;ADMINISTRATOR;True
-2;Mladen;Kalajdžić;1234567898765;MUSKI;2;kalajbrcko@gmail.com;Kalajica.12;STUDENT;True
-3;Miloš;Sikimić;1234567898765;MUSKI;2;sikeljubinje@gmail.com;Sike.12;PROFESOR;True
+1;Tanja;Kojić;1703996123456;ZENSKI;1;tanjakojic@gmail.com;tanja123;ADMINISTRATOR;True
+2;Ilija;Kalajdžić;0108955123456;MUSKI;2;kalajbrcko@gmail.com;kalaj123;ADMINISTRATOR;True
+3;Mladen;Kalajdžić;1604988123456;MUSKI;3;kalajbrcko@gmail.com;kalaj123;STUDENT;True
+4;Miloš;Sikimić;1910999123456;MUSKI;4;sikeljubinje@gmail.com;sike123;STUDENT;True
+5;Marko;Sikimić;0202003123456;MUSKI;5;macaljubinje@gmail.com;maca123;PROFESOR;True
+6;Aleksa;Radic;2409002123456;MUSKI;6;aleksaradic02@gmail.com;zrvanj123;PROFESOR;True

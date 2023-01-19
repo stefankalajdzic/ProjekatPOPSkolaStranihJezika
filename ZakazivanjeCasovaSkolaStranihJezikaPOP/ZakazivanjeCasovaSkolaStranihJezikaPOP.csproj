@@ -95,6 +95,42 @@
     <Compile Include="windows\StudentWindows\StudentDisplay.xaml.cs">
       <DependentUpon>StudentDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="windows\UIs\AdminUIWindows\AAllUsers.xaml.cs">
+      <DependentUpon>AAllUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\AdminUIWindows\AdminUI.xaml.cs">
+      <DependentUpon>AdminUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\NotRegisteredUserWindows\NRUProfessorsWindow.xaml.cs">
+      <DependentUpon>NRUProfessorsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\NotRegisteredUserWindows\NRUSchoolsWindow.xaml.cs">
+      <DependentUpon>NRUSchoolsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\ProfessorUIWindows\PCreateNewLesson.xaml.cs">
+      <DependentUpon>PCreateNewLesson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\ProfessorUIWindows\PMyLessons.xaml.cs">
+      <DependentUpon>PMyLessons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\ProfessorUIWindows\ProfessorUI.xaml.cs">
+      <DependentUpon>ProfessorUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\ProfessorUIWindows\PViewStudent.xaml.cs">
+      <DependentUpon>PViewStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\StudentUIWindows\SBookALessonWindow.xaml.cs">
+      <DependentUpon>SBookALessonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\StudentUIWindows\SMyBookings.xaml.cs">
+      <DependentUpon>SMyBookings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UIs\StudentUIWindows\StudentUI.xaml.cs">
+      <DependentUpon>StudentUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\UtilWindows\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -146,6 +182,54 @@
     <Page Include="windows\StudentWindows\StudentDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\UIs\AdminUIWindows\AAllUsers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\AdminUIWindows\AdminUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\NotRegisteredUserWindows\NRUProfessorsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\NotRegisteredUserWindows\NRUSchoolsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\ProfessorUIWindows\PCreateNewLesson.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\ProfessorUIWindows\PMyLessons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\ProfessorUIWindows\ProfessorUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\ProfessorUIWindows\PViewStudent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\StudentUIWindows\SBookALessonWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\StudentUIWindows\SMyBookings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UIs\StudentUIWindows\StudentUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windows\UtilWindows\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

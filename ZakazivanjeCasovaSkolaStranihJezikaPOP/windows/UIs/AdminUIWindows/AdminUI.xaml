@@ -1,0 +1,17 @@
+﻿<Window x:Class="ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.UIs.AdminUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZakazivanjeCasovaSkolaStranihJezikaPOP.windows.UIs"
+        mc:Ignorable="d"
+        Title="Admin - glavni prozor" Height="450" Width="800">
+    <Grid>
+        <Button Content="Adrese" HorizontalAlignment="Left" Height="67" Margin="116,108,0,0" VerticalAlignment="Top" Width="156" Click="AddressesButton_Click"/>
+        <Button Content="Skole" HorizontalAlignment="Center" Height="67" Margin="302,108,335.6,0" VerticalAlignment="Top" Width="156" Click="SchoolsButton_Click"/>
+        <Button Content="Studenti" HorizontalAlignment="Left" Height="67" Margin="483,108,0,0" VerticalAlignment="Top" Width="156" Click="StudentsButton_Click"/>
+        <Button Content="Profesori" HorizontalAlignment="Left" Height="67" Margin="116,219,0,0" VerticalAlignment="Top" Width="156" Click="ProfessorsButton_Click"/>
+        <Button Content="Casovi" HorizontalAlignment="Center" Height="67" Margin="302,219,335.6,0" VerticalAlignment="Top" Width="156" Click="LessonsButton_Click"/>
+        <Button Content="Korisnici" HorizontalAlignment="Left" Height="67" Margin="483,219,0,0" VerticalAlignment="Top" Width="156" Click="UsersButton_Click"/>
+    </Grid>
+</Window>

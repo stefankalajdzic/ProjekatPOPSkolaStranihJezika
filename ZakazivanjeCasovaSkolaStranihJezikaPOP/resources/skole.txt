@@ -1,3 +1,4 @@
-1;Centar za strane jezike Kalaj;2;Serbian,Russian,English;True
-2;Skola stranih jezika Sike;2;Serbian,Italian, German;True
-
+1;Centar za strane jezike Kalaj;1;Serbian,Russian,English;True
+2;Skola stranih jezika Sike;2;Serbian,Italian,German;True
+3;Engleski za sve - profMarko;3;Macedonian,English,Bulgarian;True
+4;Skola za francuski jezik;6;Bulgarian, Macedonian, Serbian;True

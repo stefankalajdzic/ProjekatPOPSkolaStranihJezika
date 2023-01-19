@@ -122,14 +122,14 @@ namespace ZakazivanjeCasovaSkolaStranihJezikaPOP.models
             return null;
         }
 
-        public Student pronadjiStudentaPoKorisnickomId(int korisnikID)
+        public Student pronadjiStudentaPoKorisnickomId(string korisnikID)
         {
-            return Studenti.FirstOrDefault(c => int.Parse(c.Korisnik.ID) == korisnikID);
+            return Studenti.FirstOrDefault(c => c.Korisnik.ID == korisnikID);
         }
 
-        public Profesor pronadjiProfesoraPoKorisnickomId(int korisnikID)
+        public Profesor pronadjiProfesoraPoKorisnickomId(string korisnikID)
         {
-            return Profesori.FirstOrDefault(p => int.Parse(p.Korisnik.ID) == korisnikID);
+            return Profesori.FirstOrDefault(p => p.Korisnik.ID == korisnikID);
         }
     }
 }
